@@ -1,0 +1,74 @@
+:root{
+    --color1--: #fff
+    
+}
+
+
+/* 
+body{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+} */
+.all{
+    background-color: orange;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.titlecauculator{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 12px;
+}
+.cauculadora- separetion{
+    background-color: black;
+}
+#form.imput{
+    display: flexbox;
+    align-items: center;
+}
+#form h2{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+#form input{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 15px;
+    background-color: aqua;
+}
+#button{
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+    display: flex;
+    margin-left: 60px;
+    width: auto;
+    margin-bottom: 50px;
+
+}
+.erro{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: red;
+    color: white;
+}
+.outputimc{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    color: orange;
+    font-size: 40px;
+    border-radius: 12px;
+}
