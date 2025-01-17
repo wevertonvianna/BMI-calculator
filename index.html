@@ -7,27 +7,24 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <section class="all">
-        <div class="cauculadora">
-            <div class="titlecauculator">
-                <h1>Cauculadora - IMC</h1>
-                
-            </div>
-            <div class="erromsg"></div>
-            <div>
-                <form action="" id="form">
-                    <h2>Nome:</h2><input id="namer" type="text">
-                    <h2>Altura:</h2><input id="heightm" type="number">
-                    <h2>Peso:</h2><input id="weightkg" type="number">
-                    <button  id="button" type="submit" value="submit">Caucular</button>
-                </form>
-            </div>
-            <div class="output">
-                    <h2></h2>
-            </div>
+    <div class="conatiner">
+        <div class="title">Cauculador - IMC </div>
+        <div class="erro"></div>
+        <div class="input">
+            <label>Nome:</label>
+            <input type="text" id="name">
         </div>
-    </section>
-
+        <div class="input">
+            <label>Peso:</label>
+            <input type="number" id="Peso">
+        </div>
+        <div class="input">
+            <label>Altura:</label>
+            <input type="number"id="Altura" >
+        </div>
+        <button id="caucular">caucular</button>
+        <div class="result"></div>
+    <div>
     <script src="/main.js"></script>
 </body>
 </html>

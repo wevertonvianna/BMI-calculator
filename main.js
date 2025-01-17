@@ -1,30 +1,60 @@
-  const nameinput = document.querySelector('#namer');
-  const heightminput = document.querySelector('#heightm');
-  const weightkinput = document.querySelector('#weightkg');
-  const buttoninput = document.querySelector('#button');
-  const errormgs = document.querySelector('.erromsg');
-  const output = document.querySelector(".output")
+const namerimput =document.querySelector("#name");
+const alturaimput =document.querySelector("#Altura");
+const pesoimput =document.querySelector("#Peso");
+const buttonimput =document.querySelector("#caucular");
+const resultadoimput =document.querySelector(".result");
+const erro =document.querySelector(".erro");
 
-  buttoninput.addEventListener("click",(e) => {
-         e.preventDefault();
-         const namevalue =nameinput.value;
-         const heightmvalue =heightminput.value;
-         const weightkvalue =weightkinput.value;      
-         
 
-          if(namevalue === "" || heightmvalue ==="" ||weightkvalue ===""){
-             errormgs.textContent = "please Fill out the fields!";
-             errormgs.classList ="erro"
-             setTimeout(() => {
-                  errormgs.textContent = "";
-                  errormgs.classList ="";},3000);
-                 return;
-          }else{
-            const  imccomplite= weightkvalue/(heightmvalue*heightmvalue)
-            const imcvalue = imccomplite.toFixed(2)
-             output.innerHTML =`${namevalue} o seu IMC é ${imcvalue} `;
-             output.classList = "outputimc"
-          
-        }
 
-        })
+function imc(){
+  const namervalue = namerimput.value
+  const alturarvalue = alturaimput.value
+  const pesorvalue = pesoimput.value
+  const resultvalue = resultadoimput
+
+  if(namervalue === "" || pesorvalue ==="" || alturarvalue===""){
+    erro.textContent ='Prencha todos os campos'
+    erro.classList = ""
+    setTimeout(()=>{
+      erro.textContent ='';
+      erro.classList = "";
+    },4000);
+  }else{const valueimc =(pesorvalue/(alturarvalue*alturarvalue)).toFixed(2);
+
+    let classified = '';
+
+    if(valueimc < 18.5){
+      classified ="abaixo do peso";}else{
+      if(valueimc <25){
+        classified ="com o peso ideal !!!";}else{
+        if(valueimc <30){
+          classified ="levemente acima do peso ,Parabéns!!!";}else{
+          if(valueimc <30){
+            classified ="com obesidade grau I !!!";}else{
+             if(valueimc <30){
+              classified =" com obesidade grau II !!!";}else{
+              classified =" com obesidade grau III .cuidado !!!";
+              }}}}}
+  
+    resultvalue.textContent =`${namervalue} seu IMC ${valueimc} você está ${classified}`;
+    setTimeout(()=>{
+      namerimput.textContent ='';
+      alturaimput.textContent ="";
+
+      console.log("kgtgg")
+    },2000);
+      
+
+
+    
+
+
+}}
+
+
+
+
+
+buttonimput.addEventListener("click",imc);
+
