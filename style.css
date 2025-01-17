@@ -77,3 +77,11 @@ body{
     box-sizing: border-box;
     user-select: none;
   }
+  .error{
+    display: flex;
+    margin-top: 20px;
+    align-items: center;
+    background: #ff0000;
+    color: rgb(255, 255, 255)
+   
+  }

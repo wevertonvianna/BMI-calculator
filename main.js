@@ -3,7 +3,7 @@ const alturaimput =document.querySelector("#Altura");
 const pesoimput =document.querySelector("#Peso");
 const buttonimput =document.querySelector("#caucular");
 const resultadoimput =document.querySelector(".result");
-const erro =document.querySelector(".erro");
+const erro =document.querySelector(".error");
 
 
 
@@ -15,11 +15,11 @@ function imc(){
 
   if(namervalue === "" || pesorvalue ==="" || alturarvalue===""){
     erro.textContent ='Prencha todos os campos'
-    erro.classList = ""
-    setTimeout(()=>{
-      erro.textContent ='';
-      erro.classList = "";
-    },4000);
+    erro.classList = "error"
+     setTimeout(()=>{
+       erro.textContent ='';
+       erro.classList = "";
+     },4000);
   }else{const valueimc =(pesorvalue/(alturarvalue*alturarvalue)).toFixed(2);
 
     let classified = '';
@@ -38,23 +38,13 @@ function imc(){
               }}}}}
   
     resultvalue.textContent =`${namervalue} seu IMC ${valueimc} você está ${classified}`;
-    setTimeout(()=>{
-      namerimput.textContent ='';
-      alturaimput.textContent ="";
 
-      console.log("kgtgg")
-    },2000);
-      
 
 
     
 
 
 }}
-
-
-
-
 
 buttonimput.addEventListener("click",imc);
 
