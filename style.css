@@ -58,7 +58,7 @@ body{
     background: #000;
     color: rgb(255,198,0);
     outline: none;
-    border-radius: 5px;
+    border-radius: 15px;
     cursor: pointer;
   }
   
@@ -85,3 +85,24 @@ body{
     color: rgb(255, 255, 255)
    
   }
+.titulosobre{
+  color: #ff0000;
+ align-items: center;
+
+}
+#sobre{
+    width: 300px;
+    font: bold 1.2rem serif;
+    background: #000;
+    color: rgb(255,198,0);
+    outline: none;
+    border-radius: 15px;
+    cursor: pointer;
+    text-decoration: none;
+}
+#sobre p {
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+
+}

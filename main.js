@@ -40,10 +40,6 @@ function imc(){
     resultvalue.textContent =`${namervalue} seu IMC ${valueimc} você está ${classified}`;
 
 
-
-    
-
-
 }}
 
 buttonimput.addEventListener("click",imc);
